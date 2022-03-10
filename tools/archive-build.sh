@@ -18,6 +18,7 @@ ls ../components/arduino
 echo "Creating framework-arduinoespressif32"
 cp -rf ../components/arduino arduino-esp32
 rm -rf arduino-esp32/docs
+rm -rf arduino-esp32/tests
 rm -rf arduino-esp32/package
 rm -rf arduino-esp32/tools/sdk
 rm -rf arduino-esp32/tools/esptool.py
