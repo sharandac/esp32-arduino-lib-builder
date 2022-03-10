@@ -66,25 +66,25 @@ if [ $? -ne 0 ]; then exit 1; fi
 # CLONE/UPDATE ESP-DL
 #
 
-if [ ! -d "$AR_COMPS/esp-dl" ]; then
-	git clone $DL_REPO_URL "$AR_COMPS/esp-dl"
-else
-	git -C "$AR_COMPS/esp-dl" fetch && \
-	git -C "$AR_COMPS/esp-dl" pull --ff-only
-fi
-if [ $? -ne 0 ]; then exit 1; fi
+#if [ ! -d "$AR_COMPS/esp-dl" ]; then
+#	git clone $DL_REPO_URL "$AR_COMPS/esp-dl"
+#else
+#	git -C "$AR_COMPS/esp-dl" fetch && \
+#	git -C "$AR_COMPS/esp-dl" pull --ff-only
+#fi
+#if [ $? -ne 0 ]; then exit 1; fi
 
 #
 # CLONE/UPDATE ESP-SR
 #
 
-if [ ! -d "$AR_COMPS/esp-sr" ]; then
-	git clone $SR_REPO_URL "$AR_COMPS/esp-sr"
-else
-	git -C "$AR_COMPS/esp-sr" fetch && \
-	git -C "$AR_COMPS/esp-sr" pull --ff-only
-fi
-if [ $? -ne 0 ]; then exit 1; fi
+#if [ ! -d "$AR_COMPS/esp-sr" ]; then
+#	git clone $SR_REPO_URL "$AR_COMPS/esp-sr"
+#else
+#	git -C "$AR_COMPS/esp-sr" fetch && \
+#	git -C "$AR_COMPS/esp-sr" pull --ff-only
+#fi
+#if [ $? -ne 0 ]; then exit 1; fi
 
 #
 # CLONE/UPDATE ESP-LITTLEFS
@@ -104,17 +104,17 @@ if [ $? -ne 0 ]; then exit 1; fi
 # CLONE/UPDATE ESP-DSP
 #
 
-if [ ! -d "$AR_COMPS/esp-dsp" ]; then
-	git clone $DSP_REPO_URL "$AR_COMPS/esp-dsp"
+#if [ ! -d "$AR_COMPS/esp-dsp" ]; then
+#	git clone $DSP_REPO_URL "$AR_COMPS/esp-dsp"
 	# cml=`cat "$AR_COMPS/esp-dsp/CMakeLists.txt"`
 	# echo "if(IDF_TARGET STREQUAL \"esp32\" OR IDF_TARGET STREQUAL \"esp32s2\" OR IDF_TARGET STREQUAL \"esp32s3\")" > "$AR_COMPS/esp-dsp/CMakeLists.txt"
 	# echo "$cml" >> "$AR_COMPS/esp-dsp/CMakeLists.txt"
 	# echo "endif()" >> "$AR_COMPS/esp-dsp/CMakeLists.txt"
-else
-	git -C "$AR_COMPS/esp-dsp" fetch && \
-	git -C "$AR_COMPS/esp-dsp" pull --ff-only
-fi
-if [ $? -ne 0 ]; then exit 1; fi
+#else
+#	git -C "$AR_COMPS/esp-dsp" fetch && \
+#	git -C "$AR_COMPS/esp-dsp" pull --ff-only
+#fi
+#if [ $? -ne 0 ]; then exit 1; fi
 
 #
 # CLONE/UPDATE TINYUSB
