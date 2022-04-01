@@ -1,4 +1,4 @@
-name: ESP32 Arduino solo1 builder
+name: ESP32 Arduino NSPanel
 
 on:
   workflow_dispatch:  # Manually start a workflow
